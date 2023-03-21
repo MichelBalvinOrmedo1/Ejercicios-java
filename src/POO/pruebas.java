@@ -8,6 +8,8 @@ public class pruebas {
 		System.out.println(auto.getVelocidadMaxima());
 		Persona michel = new Persona("Michel","Balvin", 22, "michel_balvin@hotmail.com");
 		michel.imprimirDatos();
+		Persona Alex = new Persona("Alex","Paredes", 22, "michel_balvin@hotmail.com");
+		Alex.imprimirDatos();
 	}
 
 }
