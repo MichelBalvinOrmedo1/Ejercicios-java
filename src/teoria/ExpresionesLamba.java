@@ -4,6 +4,7 @@ import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ExpresionesLamba {
 
@@ -34,8 +35,13 @@ public class ExpresionesLamba {
 		                 .filter(n -> n % 2 == 0) // Filtramos los números pares
 		                 .mapToInt(n -> n)  // Convertimos los números en enteros
 		                 .sum();            // Sumamos los números
-
+		int[] enteros = numeros.stream().filter(n-> n %2 == 0).mapToInt(n -> n).toArray();
+			       
+			       
 		System.out.println("La suma de los números pares y mayores que 5 es: " + suma);
+		for(int entero : enteros) {
+			System.out.println(entero);
+		}
 
 		cities.stream().parallel().forEach(city -> System.out.println(city));
 		

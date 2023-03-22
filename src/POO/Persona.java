@@ -4,13 +4,15 @@ public class Persona {
 	private String nombre;
 	private String apellido;
 	private int edad;
+	private char genero;
 	private String correo;
 	
 	//Constructor
-	public Persona(String  nombre, String apellido, int edad, String correo) {
+	public Persona(String  nombre, String apellido, int edad, char genero ,String correo) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.edad = edad;
+		this.genero = genero;
 		this.correo = correo;
 	}
 	//Seter y Getter
@@ -22,6 +24,9 @@ public class Persona {
 	}
 	public int getEdad(){
 		return this.edad;
+	}
+	public char getGenero() {
+		return this.genero;
 	}
 	public String getCorreo() {
 		return this.correo;
@@ -36,10 +41,13 @@ public class Persona {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	public void setGenero(char genero) {
+		this.genero = genero;
+	}
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
 	public void imprimirDatos() {
-		System.out.println("Soy "+this.nombre +" "+ this.apellido + " Tengo " + this.edad + " años y mi correo es "+ this.correo );
+		System.out.println("Soy "+this.nombre +" "+ this.apellido + " Tengo " + this.edad + "mi genero es "+ this.genero +" años y mi correo es "+ this.correo );
 	}
 }
